@@ -1,0 +1,1 @@
+_gtw_defaultProfileImage="/images/profile-photo.png";

@@ -1,0 +1,39 @@
+.navbar{
+	background-color: #3a5795;
+	/*background-color: #129793;*/
+	/*background-color: rgb(81, 210, 183);*/
+	border-radius: 0;
+	border: 0;
+	/*height:50px;*/
+}
+
+.label.label-default.navbar-points{
+	padding: 5px 15px 5px 15px;
+    border-radius: 27px;
+    background-color: rgb(81, 210, 183);
+    /*font-size: 20px;*/
+    margin-left: 5px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+.navbar-default .navbar-nav > li > a, 
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:visited,
+.navbar-default .navbar-nav > li > a:focus{
+	color:white;
+}
+
+.navbar-nav > li > .dropdown-menu{
+    background-color: gray; 
+}
+
+.navbar-profile-img{
+	width: 32px;
+    height: 32px;
+    margin-right: 5px; 
+}
+
+.navbar-nav>li>a.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

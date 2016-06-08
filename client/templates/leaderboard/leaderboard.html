@@ -1,0 +1,35 @@
+<template name="leaderboard">
+	{{#if Template.subscriptionsReady}}
+		{{#each top10Users}}
+			<div class="row">
+		<div class="col-xs-10">
+			<div class="rank-container">
+   				<span class="label label-default leaderboard-user-ranking">{{math @index "+" 1}}</span>
+   				<span class="label label-default leaderboard-user-name"><a href="{{pathFor route='statsWithID'}}">{{profile.name}}</a></span>
+        	</div>	
+		</div>
+		<div class="col-xs-2">
+			<div class="profile-header-container">   
+			
+    		<div class="profile-header-img">
+    			<img class="img-circle" src="{{returnValidProfilePicture profile.picture}}"/>
+                <!-- badge -->
+                
+                <div class="rank-label-container">
+                    <span class="label label-default rank-label">{{returnNonZeroValue totalPoints}}</span>
+                </div>
+             </div>
+        	</div> 
+		</div>
+	</div>	
+	
+	<hr class="leaderboard-hr" />
+	{{/each}}
+	
+	<div class="row leaderboard-myrank">
+		<div class="col-xs-12">
+			Your Rank: {{myRank}}
+		</div>
+	</div>
+	{{/if}}
+</template>

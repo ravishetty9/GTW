@@ -1,0 +1,16 @@
+<template name="home">
+	{{#if Template.subscriptionsReady}}
+		{{#if availableMatch}}
+			{{#with availableMatch}}
+				{{> singleGame}}
+			{{/with}}
+		{{else}}
+			<div class="home-logo-image">
+				<img src="/images/logo.png" />
+			</div>
+			<div class="home-nogames-left">Entry will be open only 2 days prior to the match.</div>
+		{{/if}}	
+  	{{else}}
+    	{{> loading}}
+  	{{/if}} 
+</template>

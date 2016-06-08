@@ -1,0 +1,127 @@
+<template name="navbar">
+{{#if Template.subscriptionsReady}}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      {{#if currentUser}}
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gtw-navbar-main" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{/if}}
+      <a class="navbar-brand" href="/">Guessthewinner</a>
+    </div>
+
+    {{#if currentUser}}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="gtw-navbar-main">
+      <ul class="nav navbar-nav">
+
+        <li class="{{#if onPage 'home'}}active{{/if}}">
+          <a class="navbar-menu-item" href="{{pathFor route= 'home'}}">Home</a>
+        </li>
+
+        <li class="{{#if onPage 'leaderboard'}}active{{/if}}">
+          <a class="navbar-menu-item" href="{{pathFor route= 'leaderboard'}}">Leaderboard</a>
+        </li>
+
+        <li class="{{#if onPage 'stats'}}active{{/if}} {{#if onPage 'statsWithID'}}active{{/if}}">
+          <a class="navbar-menu-item" href="{{pathFor route= 'stats'}}">Stats <span class="label label-default navbar-points">{{totalPoints}}</span></a>
+        </li>
+        
+        {{#if isAdminUser}}
+        <li class="{{#if onPage 'matches'}}active{{/if}}">
+          <a class="navbar-menu-item" href="{{pathFor route= 'matches'}}">Matches</a>
+        </li>
+        {{/if}}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li>
+          <a href="">
+            <span class="label label-default navbar-points">{{totalPoints}}</span>
+          </a>
+        </li> -->
+       
+       <!--  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          {{currentUser.profile.name}} <span class="caret"></span></a>
+          <span class="navbar-profile-header-img">
+            <img class="img-circle" src={{currentUser.profile.picture}} />
+          </span>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#" class="logout">Signout</a></li>
+          </ul>
+        </li> -->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
+          <img src={{currentProfilePicture}} class="navbar-profile-img img-circle">{{currentUser.profile.name}}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <!-- <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+            <li class="divider"></li> -->
+            <li><a href="#" class="logout"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    {{/if}}
+
+  </div><!-- /.container-fluid -->
+</nav>
+{{/if}}
+<!--   <div class="navbar-fixed">
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Guess the winner</a>
+      {{#if currentUser}}
+      <a href="#" data-activates="gtw-menu" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+            <li class="{{#if onPage 'leaderboard'}}active{{/if}}">
+              <a href="{{pathFor route= 'leaderboard'}}">Leaderboard</a>
+            </li>
+
+            <li class="{{#if onPage 'stats'}}active{{/if}}">
+              <a href="{{pathFor route= 'stats'}}">Stats</a>
+            </li>
+            
+            {{#if isAdminUser}}
+            <li class="{{#if onPage 'matches'}}active{{/if}}">
+              <a href="{{pathFor route= 'matches'}}">Matches</a>
+            </li>
+            {{/if}}
+
+            <li>
+              <a id="gtw-logout-dropdown-menu" class="dropdown-button" href="" data-activates="gtw-menu-dropdown">
+                {{loggedInUserName}}<i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+      </ul>
+      {{/if}}
+    </div>
+  </nav>
+</div>
+
+<ul class="side-nav" id="gtw-menu">
+  <li><a href="sass.html">{{loggedInUserName}}</a></li>
+  <li><a href="sass.html">Leaderboard</a></li>
+  <li><a href="#">Stats</a></li>
+  <li><a href="#">Matches</a></li>
+  <li><a href="#" class="logout">Logout</a></li>
+</ul>
+
+
+<ul id="gtw-menu-dropdown" class="dropdown-content">
+  <li><a href="#">Profile</a></li>
+  <li class="divider"></li>
+  <li><a href="#" class="logout">Logout</a></li>
+</ul> -->
+
+</template>

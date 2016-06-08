@@ -1,0 +1,54 @@
+<template name="login">
+  <div class="row">
+  <div class="col-sm-12 col-md-6 col-md-offset-3">
+    <form class="login-form">
+
+    <div class="form-group">
+      <label for="loginEmail">Username/Email</label>
+      <input type="text" name="loginEmail" class="form-control required" placeholder="Username/Email" >
+    </div>
+    
+    <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" name="loginPassword" class="form-control required" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Login</button>
+      
+    </div>
+
+    <div class="form-group">
+      <a data-toggle="modal" data-target="#forgot-pwd-modal">Forgot Password?</a>
+    </div>
+
+    </form>
+
+    <p>Don't have an account? <a class="btn btn-success" href="{{pathFor 'register'}}">Register</a></p>
+
+  </div>
+  
+  </div>
+
+  <div id="forgot-pwd-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Reset Password</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="forgotPasswordEmail">Email</label>
+          <input type="text" id="forgotPasswordEmail" class="form-control required" placeholder="Email" >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="forgot-pwd-submit-btn" type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</template>

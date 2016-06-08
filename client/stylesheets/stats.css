@@ -1,0 +1,35 @@
+.table-header{
+	background: #777;
+	color:white;
+}
+
+.table-row-good{
+	background: #008000;
+	color: white;
+}
+
+.table-row-bad{
+	background: #990000;
+	color: white;
+}
+
+.table-content-center{
+	text-align: center;
+}
+
+.radio>input[type="radio"]{
+	margin-left: 0;
+}
+
+.stats-total-row{
+	background-color: #777;
+}
+
+.stats-fullname{
+	padding-bottom: 10px;
+}
+
+.label.label-default.stats-user-name{
+	padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}

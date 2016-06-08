@@ -1,0 +1,47 @@
+<template name="singleGame">
+	<!-- <div class="row">
+		<div class="singleGame-gameCounter">
+			{{gameStartCounter}}
+		</div>
+	</div>
+	<br/> -->
+	<div class="row">
+		<div class="col-lg-12 please-click-info">Please click on a team image to select.</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 col-sm-12">
+			<div class="team1 singleGame-team-logo" data-id="{{team1_id}}" data-name="{{team1_name}}">
+			 	<a href="">
+					<img class="singleGame-team-logo-img" src='{{team1_logo}}' />
+				</a>
+			</div>
+			<div class="singleGame-team-name">{{team1_name}}</div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="singleGame-vs-text">vs</div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="team2 singleGame-team-logo" data-id="{{team2_id}}" data-name="{{team2_name}}">
+				<a href="">
+					<img class="singleGame-team-logo-img" src="{{team2_logo}}" />	
+				</a>
+			</div>
+			<div class="singleGame-team-name">{{team2_name}}</div>
+		</div>	
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-lg-12">
+			<input id="scoreRangeSlider" />
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="singleGame-submit-button-container">
+				<button type="button" class="singleGame-submit-button btn btn-success">Play Game</button>
+			</div>
+		</div>
+	</div>
+</template>

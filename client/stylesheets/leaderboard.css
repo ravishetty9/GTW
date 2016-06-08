@@ -1,0 +1,68 @@
+/**
+ * Profile image component
+ */
+.profile-header-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header-img {
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+    float: right;
+}
+
+.profile-header-img > img.img-circle {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #51D2B7;
+}
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+    margin-top: -19px;
+    /* z-index: 1000; */
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: rgb(81, 210, 183);
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
+.rank-container{
+	/*text-align: right;*/
+   	font-size: 24px;
+   	line-height: 80px;
+}
+
+.label.label-default.leaderboard-user-ranking{
+	background-color: rgb(81, 210, 183);
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
+.label.label-default.leaderboard-user-name{
+	padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
+.label.label-default.leaderboard-user-name> a{
+    color: white;
+}
+
+.leaderboard-hr{
+	border-top-color: rgb(81, 210, 183);
+	margin: 0;
+}
+
+.leaderboard-myrank{
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 16px;
+}

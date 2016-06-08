@@ -1,0 +1,11 @@
+body{
+	/*background-color: #FFF5C3;*/
+}
+
+input.error{
+	background-color: pink;
+}
+
+label.error{
+	color:red;
+}

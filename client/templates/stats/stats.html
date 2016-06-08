@@ -1,0 +1,58 @@
+<template name="stats">
+ {{#if Template.subscriptionsReady}}
+ 	{{#if statsAvailable}}
+ 	<div class="stats-fullname">
+		<span class="label label-default stats-user-name">{{userFullName}}</span>
+	</div>
+	<table id="stats-table" class="table">
+		<thead class="table-header">
+			<tr>
+				<th>Match</th>
+				<!-- <th>User</th> -->
+				<th>Selected Team</th>
+				<th>Points</th>
+				<th>Winning Team</th>
+				<th>Points Earned</th>
+			</tr>
+		</thead>
+		<tbody>
+		   {{#each myStats}}
+		   	 {{> statsRow}}
+		   {{/each}}
+		</tbody>
+		
+		<tfoot>
+		    <tr class="stats-total-row">
+		      <th>Total</th>
+		      <!-- <td></td> -->
+		      <td></td>
+		      <td></td>
+		      <td></td>
+		      <th class="stats-total-points">{{totalPoints}}</th>
+		    </tr>
+  		</tfoot>
+	</table>
+	<div>
+		{{#if navigateFromLeaderBoard}}
+			<a href="{{pathFor route= 'leaderboard'}}" class="btn btn-primary">BACK</a>
+		{{/if}}
+	</div>
+	{{else}}
+	 <div>Currently, there are no stats available.</div>
+	{{/if}}
+
+{{else}}
+	{{> loading}}
+{{/if}}
+</template>
+
+<template name="statsRow">
+   	<tr class="table-row-neutral">
+   		<td>{{match_desc}}</td>
+		<!-- <td>{{user_email}}</td> -->
+		<td>{{user_selected_team_name}}</td>
+		<td>{{user_selected_points}}</td>
+		<td>{{winning_team_name}}</td>
+		<td class="{{isRowGood}}">{{points_earned}}</td>
+	</tr>
+</template>

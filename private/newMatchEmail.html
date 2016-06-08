@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body style="background-color: #e8e8e8; font-family: 'Roboto',Helvetica,Arial,sans-serif!important" align="center">
+  <table style="border:1px solid lightgray;padding:10px; border-spacing:0; font-weight:100; color:black; font-size:16px; color:#333333; background-color: white; border-radius: 5px;" align="center">
+      <tr>
+         <td colspan="3" style="text-align: center; padding: 15px; font-size: 36px; line-height: 34px; font-weight: bold;">
+          GuessTheWinner
+         </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 10px 0;line-height: 18px;" colspan="3">
+          Dear {{user_firstname}},
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 10px 0;line-height: 18px;" colspan="3">
+          A new match has been added.</td>
+      </tr>
+
+      <tr style="background: #e7e7ec;">
+        <td>
+          <img style="margin:25px; width:300px; height: 300px; border:1px solid lightgray; border-radius: 5px" src="{{team1_logo}}" />
+          <!-- <img style="margin:25px; width:300px; height: 300px; border:1px solid lightgray; border-radius: 5px" src="http://res.cloudinary.com/dcshbkl7h/image/upload/v1458180899/India_i26oe0.png" /> -->
+        </td>
+        <td class="matchDetails-vs">
+          vs
+        </td>
+        <td>
+          <img style="margin:25px; width:300px; height: 300px; border:1px solid lightgray; border-radius: 5px" src="{{team2_logo}}" />
+          <!-- <img style="margin:25px; width:300px; height: 300px; border:1px solid lightgray; border-radius: 5px" src="http://res.cloudinary.com/dcshbkl7h/image/upload/v1458181077/pak_wb9bxt.jpg" /> -->
+        </td>
+      </tr>
+
+      <tr style="background: #e7e7ec;">
+        <td style="font-size: 20px;text-align: center;">
+          {{team1_name}}
+        </td>
+        <td>
+
+        </td>
+        <td style="font-size: 20px;text-align: center;">
+          {{team2_name}}
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3" style="padding: 15px;text-align: center;">
+          <button type="button" style="color: #fff; background-color: #5cb85c; border-color: #4cae4c;padding: 8px 14px;font-size: 14px;font-weight: normal;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;border-radius: 5px;border-style: none;">
+            <a href={{appURL}} style="color: #fff;text-decoration: none;">Play Game</a>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"  style="padding: 15px 0;font-size: 16px;">
+          Cheers,<br/>
+          Team GuessTheWinner
+        </td>
+      </tr>
+  </table>
+</body>
+</html>
